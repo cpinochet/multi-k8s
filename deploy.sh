@@ -46,4 +46,4 @@ echo $CURRENT_TAG
 sed -i -r 's/'":$CURRENT_TAG"'/'":$STC"'/g' k8s/worker-deployment.yaml
 cat k8s/worker-deployment.yaml | grep image
 
-# kubectl apply -f k8s
+# c
