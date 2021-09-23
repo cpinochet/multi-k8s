@@ -28,6 +28,18 @@ after_success:
   - docker build -t cpinochet/multi-client:${STC} -f ./client/Dockerfile ./client
   - docker build -t cpinochet/multi-server:${STC} -f ./server/Dockerfile ./server
   - docker build -t cpinochet/multi-worker:${STC} -f ./worker/Dockerfile ./worker
+  - # Take those images and push them to docker hub
+  - docker tag cpinochet/multi-client:${STC} cpinochet/multi-client:latest
+  - docker push cpinochet/multi-client:${STC}
+  - docker push cpinochet/multi-client:latest
+  - # Multi-server
+  - docker tag cpinochet/multi-server:${STC} cpinochet/multi-server:latest
+  - docker push cpinochet/multi-server:${STC}
+  - docker push cpinochet/multi-server:latest
+  - # Multi-worker
+  - docker tag cpinochet/multi-worker:${STC} cpinochet/multi-worker:latest
+  - docker push cpinochet/multi-worker:${STC}
+  - docker push cpinochet/multi-worker:latest
 
 deploy:
   provider: script
