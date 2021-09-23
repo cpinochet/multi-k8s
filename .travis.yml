@@ -10,7 +10,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project eco-shift-326816
   - gcloud config set compute/zone us-central1-a
-  - gcloud container clusgter list 
+  - gcloud container clusters list 
   - gcloud container clusters get-credentials multi-cluster
   - kubectl get nodes
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USENAME" --password-stdin
