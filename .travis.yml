@@ -61,6 +61,6 @@ after_success:
 deploy:
   provider: script
   script:
-    - echo "Hola mundo"
+    - kubectl apply -f k8s
   on:
     branch: master
