@@ -19,6 +19,16 @@ script:
 
 deploy:
   provider: script
-  script: bash ./deploy.sh
+  script:
+    - echo "Travis_Job id is $TRAVIS_JOB_ID"
+    - echo "Travis_commit is $TRAVIS_COMMIT"
+    - STC=`echo ${TRAVIS_COMMIT::7}`
+    - export $STC
+    - echo $STC
+    - echo "Travis_pull_requet_sha is $TRAVIS_PULL_REQUEST_SHA"
+    - echo "Building Docker Images..."
+    - docker build -t cpinochet/multi-client:${STC} -f ./client/Dockerfile ./client
+    - docker build -t cpinochet/multi-server:${STC} -f ./server/Dockerfile ./server
+    - docker build -t cpinochet/multi-worker:${STC} -f ./worker/Dockerfile ./worker
   on:
     branch: master
