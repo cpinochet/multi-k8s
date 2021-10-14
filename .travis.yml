@@ -59,7 +59,7 @@ after_success:
   - sed -i -r 's/'":$CURRENT_TAG"'/'":$STC"'/g' k8s/worker-deployment.yaml
   - cat k8s/worker-deployment.yaml | grep image
   - echo "Starting deploy..."
-  - kubectl apply -f k8s 
+  # - kubectl apply -f k8s 
 
 deploy:
   provider: script
