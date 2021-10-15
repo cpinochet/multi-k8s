@@ -10,6 +10,8 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
+          <img src="Yandi.jpg" /> 
+          <h3>Yandi, la gata.</h3>
           <img src={logo} className="App-logo" alt="logo" />
           <a
             className="App-link"
