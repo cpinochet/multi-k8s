@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <img src="Yandi.jpg" /> 
+          <img src="https://photos.google.com/share/AF1QipPjazjV2ieZK0vkrDJIUmT_n7HRer5NbbOMj0k_l5OBpNObUp00_bRx59jhyKUi2w/photo/AF1QipPg4Yg6ZwQX6w-XFmGRYb2tk6udx2hDn8BBtCyu?key=bDR5UTl3RmVheVpjUXd3bUVaVzZGOWlqbUd3U25n" /> 
           <h3>Yandi, la gata.</h3>
           <img src={logo} className="App-logo" alt="logo" />
           <a
