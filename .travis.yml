@@ -11,12 +11,12 @@ before_install:
   - /bin/bash install_google_cloud_sdk.sh --disable-prompts
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl --quiet
-  - gcloud auth activate-service-account --key-file service-account.json
-  - gcloud config set project eco-shift-326816
-  - gcloud config set compute/zone us-central1-a
-  - gcloud container clusters list 
-  - gcloud container clusters get-credentials multi-cluster
-  - kubectl get nodes
+#  - gcloud auth activate-service-account --key-file service-account.json
+#  - gcloud config set project eco-shift-326816
+#  - gcloud config set compute/zone us-central1-a
+#  - gcloud container clusters list 
+#  - gcloud container clusters get-credentials multi-cluster
+$  - kubectl get nodes
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USENAME" --password-stdin
   - docker build -t cpinochet/react-test -f ./client/Dockerfile.dev ./client
 
