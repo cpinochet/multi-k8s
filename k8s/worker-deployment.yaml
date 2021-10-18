@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: worker
-          image: cpinochet/multi-worker:552d007
+          image: cpinochet/multi-worker:0e5e035
           env:
             - name: REDIS_HOST
               value: redis-cluster-ip-service
