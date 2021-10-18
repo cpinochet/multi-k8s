@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: cpinochet/multi-server:latest
+          image: cpinochet/multi-server:552d007
           ports:
             - containerPort: 5000
           env:

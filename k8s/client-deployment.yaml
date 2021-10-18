@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: client
-          image: cpinochet/multi-client:latest
+          image: cpinochet/multi-client:552d007
           ports:
             - containerPort: 3000
