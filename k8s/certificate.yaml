@@ -2,13 +2,13 @@ apiVersion: cert-manager.io/v1
  
 kind: Certificate
 metadata:
-  name: yandilagata-ga-tls
+  name: jandilagata-tk-tls
 spec:
-  secretName: yandilagata-ga
+  secretName: jandilagata-tk
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: yandilagata.ga
+  commonName: jandilagata.tk
   dnsNames:
-    - yandilagata.ga
-    - www.yandilagata.ga
+    - jandilagata.tk
+    - www.jandilagata.tk
