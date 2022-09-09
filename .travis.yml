@@ -20,10 +20,11 @@ before_install:
   - gcloud container clusters get-credentials multi-cluster
   - kubectl get nodes
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USENAME" --password-stdin
-  - docker build -t cpinochet/react-test -f ./client/Dockerfile.dev ./client
+  # - docker build -t cpinochet/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true cpinochet/react-test npm test
+  - echo "Ready for docker builds..."
+  # - docker run -e CI=true cpinochet/react-test npm test
 
 after_success:
   - echo "Travis_Job id is $TRAVIS_JOB_ID"
