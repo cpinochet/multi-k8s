@@ -11,11 +11,11 @@ metadata:
 spec:
   tls:
     - hosts:
-        - yandilagata.ga
-        - www.yandilagata.ga
-      secretName: yandilagata-ga
+        - jandilagata.tk
+        - www.jandilagata.tk
+      secretName: jandilagata-tk
   rules:
-    - host: yandilagata.ga
+    - host: jandilagata.tk
       http:
         paths:
           - path: /?(.*)
@@ -32,7 +32,7 @@ spec:
                 name: server-cluster-ip-service
                 port:
                   number: 5000
-    - host: www.yandilagata.ga
+    - host: www.jandilagata.tk
       http:
         paths:
           - path: /?(.*)
