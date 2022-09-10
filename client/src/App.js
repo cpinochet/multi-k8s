@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src="https://cpinochet.github.io/images/yandi.jpg" width="400" height="400"/>
-          <h3>Yandi, la gata.</h3>
+          <h3>Jandi, la gata.</h3>
           <img src={logo} className="App-logo" alt="logo" />
           <a
             className="App-link"
