@@ -10,5 +10,4 @@ spec:
     kind: ClusterIssuer
   commonName: jandilagata.tk
   dnsNames:
-    - jandilagata.tk
     - www.jandilagata.tk
